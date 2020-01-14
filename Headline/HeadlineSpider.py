@@ -11,19 +11,19 @@ import ujson
 from concurrent.futures import  ThreadPoolExecutor
 
 
-
-def get_all_source_url(user_id:int) -> None:
+def get_all_source_item_id(user_id:int) -> None:
     max_behot_time = 0
     all_item_id_list = list()
     has_more = True
     while has_more:
         item_id_list, max_behot_time, has_more = get_item_id_list_and_max_behot_time(user_id=user_id, max_behot_time=max_behot_time)
         all_item_id_list += item_id_list
+        print('user_id:', user_id)
     print(all_item_id_list)
 
 
 
-def get_item_id_list_and_max_behot_time(user_id:int, max_behot_time:int) -> list:
+def get_item_id_list_and_max_behot_time(user_id:int, max_behot_time:int) -> (list, int, bool):
     user_main_page = f'https://www.toutiao.com/c/user/article/?page_type=1&user_id={user_id}&max_behot_time={max_behot_time}&count=20'
     res = requests.get(url=user_main_page, headers=headers)
     json_res = ujson.loads(res.text)
@@ -38,8 +38,8 @@ def get_item_id_list_and_max_behot_time(user_id:int, max_behot_time:int) -> list
     return item_id_list, max_behot_time, has_more
 
 if __name__ == '__main__':
-    user_id_list = [110935079834]
+    user_id_list = [5772853537, 110935079834]
     pool = ThreadPoolExecutor(max_workers=5)
     futures = list()
     for user_id in user_id_list:
-        futures.append(pool.submit(get_all_source_url, user_id))
+        futures.append(pool.submit(get_all_source_item_id, user_id))
