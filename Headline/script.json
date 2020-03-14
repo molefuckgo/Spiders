@@ -1,0 +1,134 @@
+[<script crossorigin="anonymous" src="//s3.pstatp.com/toutiao/monitor/sdk/slardar.js?ver=20171221_1"></script>, <script>window.Slardar && window.Slardar.install({
+      sampleRate: 0.5,
+      bid: 'toutiao_pc',
+      pid: 'article_detail_new',
+      ignoreAjax: [/\/action_log\//],
+      ignoreStatic: [/\.tanx\.com\//, /\.alicdn\.com\//, /\.mediav\.com/, /\.cnzz\.com/]
+    });</script>, <script>!function(e){function t(a){if(c[a])return c[a].exports;var o=c[a]={exports:{},id:a,loaded:!1};return e[a].call(o.exports,o,o.exports,t),o.loaded=!0,o.exports}var a=window.webpackJsonp;window.webpackJsonp=function(r,n){for(var p,s,d=0,l=[];d<r.length;d++)s=r[d],o[s]&&l.push.apply(l,o[s]),o[s]=0;for(p in n)Object.prototype.hasOwnProperty.call(n,p)&&(e[p]=n[p]);for(a&&a(r,n);l.length;)l.shift().call(null,t);if(n[0])return c[0]=0,t(0)};var c={},o={0:0};t.e=function(e,a){if(0===o[e])return a.call(null,t);if(void 0!==o[e])o[e].push(a);else{o[e]=[a];var c=document.getElementsByTagName("head")[0],r=document.createElement("script");r.type="text/javascript",r.charset="utf-8",r.async=!0,r.src=t.p+"static/js/"+e+"."+{1:"5d525bd5351cfdd9855f",2:"1efe2aaafcd424a7671c",3:"d40db64f196139258ba0",4:"6f020e99871577953c95",5:"c0c8c725efceb52dc6ba"}[e]+".js",c.appendChild(r)}},t.m=e,t.c=c,t.p="/toutiao/",t.p="//s3.pstatp.com/toutiao/"}([]);</script>, <script crossorigin="anonymous" src="//s3.pstatp.com/inapp/lib/raven.js"></script>, <script>;(function(window) {
+    // sentry
+    window.Raven && Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+      whitelistUrls: [/pstatp\.com/],
+      sampleRate: 0.5,
+      shouldSendCallback: function(data) {
+        var ua = navigator && navigator.userAgent;
+        var isDeviceOK = !/Mobile|Linux/i.test(navigator.userAgent);
+        if (data.message && data.message.indexOf('p.tanx.com') !== -1) {
+          return false;
+        }
+        return isDeviceOK;
+      },
+      tags: {
+        bid: 'toutiao_pc',
+        pid: 'article_detail_new'
+      },
+      autoBreadcrumbs: {
+        'xhr': false,
+        'console': true,
+        'dom': true,
+        'location': true
+      }
+    }).install();
+  })(window);</script>, <script>var PAGE_SWITCH = {"adScriptQihu":false,"adScriptTB":true,"anti_spam":false,"migScriptUrl":"\u002F\u002Fs3a.pstatp.com\u002Ftoutiao\u002Fpicc_mig\u002Fdist\u002Fimg.min.js","nineteen":"","picVersion":"20180412_01","qihuAdShow":false,"taVersion":"20171221_1","ttAdShow":true};</script>, <script>var BASE_DATA = {
+    userInfo: {
+      id: 0,
+      userName: '',
+      avatarUrl: '',
+      isPgc: false,
+      isOwner: false
+    },
+    headerInfo: {
+      id: 0,
+      isPgc: false,
+      userName: '',
+      avatarUrl: '',
+      isHomePage: false,
+      chineseTag: '娱乐',
+      crumbTag: 'ch/news_entertainment/',
+      hasBar: true
+    },
+    articleInfo: {
+      title: '&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一&quot;'.slice(6, -6),
+      content: '&quot;\u003Cdiv\u003E\u003Ch1\u003E\u003Cstrong\u003E2019国庆档创历史最高 《我和我的祖国》拿下第一\u003C\u002Fstrong\u003E\u003C\u002Fh1\u003E\u003Cp\u003E今年的国庆档颇有几分赛车比赛尚未开始，大家就已经全速运转发动机轰轰作响的既视感——因为大家都是定于9月30日上映，\u003Cstrong\u003E三大国庆强片：《我和我的祖国》、《中国机长》、《攀登者》。\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp1.pstatp.com\u002Flarge\u002Fpgc-image\u002F70ec1f95f2004d47bec20c564e60a0c9\&quot; img_width&#x3D;\&quot;1000\&quot; img_height&#x3D;\&quot;562\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E《我和我的祖国》\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp1.pstatp.com\u002Flarge\u002Fpgc-image\u002Fac58bf6766824978a99078708f7a9f1f\&quot; img_width&#x3D;\&quot;1080\&quot; img_height&#x3D;\&quot;462\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E《中国机长》\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp3.pstatp.com\u002Flarge\u002Fpgc-image\u002F952c95787f874b87abc43b93fdc7ac4e\&quot; img_width&#x3D;\&quot;1080\&quot; img_height&#x3D;\&quot;722\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E《攀登者》\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E那么以9月30日为起点，截止到10月7日，《我和我的祖国》一马当先，以20.6亿的收入夺得2019年国庆档的冠军。而《中国机长》紧追其后，报收17.7亿，档期中排名第二位，档期最后两天还逆袭成为单日冠军。第三则是《攀登者》，收入票房7.7亿（计入之前的电影票房，则过了8亿）。可以说，之前被看好的，广受大家关注的《攀登者》在《我和我的祖国》以及《中国机长》的协击之下有些无还手之力，只好一路败退。\u003C\u002Fp\u003E\u003Cp\u003E2019国庆档报收50.49亿，创下了历史最高，从2016年国庆档收入15.8亿，2017年国庆档收入26.35亿，2018年国庆档收入为19.1亿来看，今年可以说是出现了飞跃式的增长。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp3.pstatp.com\u002Flarge\u002Fpgc-image\u002F5b4d8d3c1314462a91e904eb526f68d4\&quot; img_width&#x3D;\&quot;1842\&quot; img_height&#x3D;\&quot;832\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E去年的国庆档冠军是《无双》，还有前年的国庆档冠军《羞羞的铁拳》，之前的冠军还有《夏洛特烦恼》《狄仁杰之通天帝国》等等。从影片内容上看，并没有太多考虑和国庆节日契合。而今年则是明显不同，爱国献礼片是今年国庆档的主流。\u003C\u002Fp\u003E\u003Ch1\u003E\u003Cstrong\u003E七位导演，七个故事很讨巧\u003C\u002Fstrong\u003E\u003C\u002Fh1\u003E\u003Cp\u003E其实从选择面来说的话，《我和我的祖国》毫无疑问会是国庆档最适合所有人观影的影片，同时加上祖国70周年生日的浓厚氛围，所以观影人数最多，票房最高也是顺势而为了。\u003C\u002Fp\u003E\u003Cp\u003E《我和我的祖国》由陈凯歌、张一白、管虎、薛晓璐、徐峥、宁浩、文牧野7位导演执导7个短片合并而成，7个短片的故事截取的是共和国7个历史重要瞬间，都是从平凡人的视角切入，让观众看到了每个平凡人的默默付出，成就祖国的强大。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp1.pstatp.com\u002Flarge\u002Fpgc-image\u002Fb2abbf8037b046d3bd0ed3b8d906fad1\&quot; img_width&#x3D;\&quot;1080\&quot; img_height&#x3D;\&quot;1512\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E要知道，长故事比短故事难讲，短故事集很容易瞬间抓住受众，但是短故事集的弱点就是不容易系统，不容易面面俱到成为史诗般的作品，不容易出经典。《我和我的祖国》从短故事集这个形式上面，确实更容易吸引观众。但是要说成为史诗型或者经典型电影的话，还是稍微差一点点感觉。不过短故事集电影如果打通一点，还是有可能成为经典的，就是像《低俗小说》一般，所有人物呼应起来并且互有穿插有所关联。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp3.pstatp.com\u002Flarge\u002Fpgc-image\u002F764de0bfe6db4783babc1975b5c97de8\&quot; img_width&#x3D;\&quot;1080\&quot; img_height&#x3D;\&quot;1920\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E因为是七个故事，所以如果有短板的话，很容易造成整体电影的评分下降。容易给人造成质量参差不齐之感，目前就大众反应来说，好像《北京你好》《夺冠》等最受大家喜欢，而《白昼流星》似乎不太受待见。\u003C\u002Fp\u003E\u003Ch1\u003E\u003Cstrong\u003E讲故事的技巧 有强有弱\u003C\u002Fstrong\u003E\u003C\u002Fh1\u003E\u003Cp\u003E七部短片依据时间的顺序，选择了从建国到最近70年来我国发生的七个事件作为时代背景，对推动这些历史性时刻或者被其影响的普通个体人物进行纪录和演绎，进而映射出我们祖国几十年来的巨大发展和兴盛富强。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp1.pstatp.com\u002Flarge\u002Fpgc-image\u002F3416be56469349cd9af77946b153e293\&quot; img_width&#x3D;\&quot;800\&quot; img_height&#x3D;\&quot;1120\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp1.pstatp.com\u002Flarge\u002Fpgc-image\u002F3235f12583a24b908c55515dbd7f5d45\&quot; img_width&#x3D;\&quot;1080\&quot; img_height&#x3D;\&quot;1512\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E但是七位导演在讲故事方面，表现还是有强有弱的。\u003Cstrong\u003E云帆更喜欢些的故事是《北京你好》和《夺冠》。\u003C\u002Fstrong\u003E也许是因为这两部比较能体现导演特色，而不是就这原著故事改编而来，加上主旋律性而失去了导演的自我特色。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp3.pstatp.com\u002Flarge\u002Fpgc-image\u002F79d96334334c4b4d88e15445b2b5ae65\&quot; img_width&#x3D;\&quot;1080\&quot; img_height&#x3D;\&quot;1511\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E《夺冠》\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E《北京你好》中，葛优饰演的出租车司机很有人味儿、很接地气，很最贴近市民生活，宁浩电影里特有的市井幽默感和接地气在这里最大活跃了整部电影的氛围。最后的“栏杆”伏笔也非常现实和由小见大。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp1.pstatp.com\u002Flarge\u002Fpgc-image\u002Fc99680ea0bf34a8e8be59d5209d4dda5\&quot; img_width&#x3D;\&quot;640\&quot; img_height&#x3D;\&quot;360\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E而《夺冠》中，徐峥让这个故事充斥着“囧系列”里那种极度反差的疲于奔命和碰撞燃点，高度还原了碎言碎语而又其乐融融的八十年代上海小巷里，各色小市民拥挤在一起，将目光聚集到唯一一台电视机上面，因为里面是中国女排参与着世界赛事总决赛。而期间小男孩撑起天线的必要性与他和小女孩的道别之间的矛盾点所诱发的情感交替，确实让人忍俊不禁。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp9.pstatp.com\u002Flarge\u002Fpgc-image\u002Fba1b1c64f246477096e40f072d0ea80f\&quot; img_width&#x3D;\&quot;1000\&quot; img_height&#x3D;\&quot;563\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Ch1\u003E\u003Cstrong\u003E一部在夹缝中生存的好片\u003C\u002Fstrong\u003E\u003C\u002Fh1\u003E\u003Cp\u003E在“国庆三强”的争斗之下，其实有一部影片被我们忽略，该影片在北美9月27日公映，首周末还凭借2061万美元拿下过周末票房冠军。截止目前，影片的北美票房累计为3775万美元。那就是中美合拍的动画电影\u003Cstrong\u003E《雪人奇缘》\u003C\u002Fstrong\u003E。\u003C\u002Fp\u003E\u003Cdiv class&#x3D;\&quot;pgc-img\&quot;\u003E\u003Cimg src&#x3D;\&quot;http:\u002F\u002Fp3.pstatp.com\u002Flarge\u002Fpgc-image\u002Fd3cedd0220464f39a1b0277f30db28a0\&quot; img_width&#x3D;\&quot;1080\&quot; img_height&#x3D;\&quot;1708\&quot; alt&#x3D;\&quot;国庆档整体票房创记录！《我和我的祖国》强势拿下第一\&quot; inline&#x3D;\&quot;0\&quot;\u003E\u003Cp class&#x3D;\&quot;pgc-img-caption\&quot;\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003Cp\u003E影片的故事发生在中国，以珠穆朗玛峰的雪人背景。讲述了三位中国都市少年与一个喜马拉雅小雪人神奇相遇、结伴同行，经历考验最终护送小雪人与家人团聚的故事。非常值得一看。\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E&quot;'.slice(6, -6),
+      groupId: '6745665728319324683',
+      itemId: '6745665728319324683',
+      type: 2,
+      subInfo: {
+        isOriginal: true,
+        source: '云帆聊电影',
+        time: '2019-10-09 13:08:13'
+      },
+      tagInfo: {
+        tags: [{"name":"大商潮流装备控"},{"name":"徐峥"},{"name":"宁浩"},{"name":"捍卫我的中国赛主场"},{"name":"夏洛特烦恼"},{"name":"薛晓璐"},{"name":"历史"},{"name":"陈凯歌"},{"name":"张一白"},{"name":"电影雪人奇缘十一上映"},{"name":"低俗小说"},{"name":"狄仁杰之通天帝国"}],
+        groupId: '6745665728319324683',
+        itemId: '6745665728319324683',
+        repin: 0,
+      },
+      has_extern_link: 0,
+      coverImg: 'http://p9.pstatp.com/list/300x196/pgc-image/70ec1f95f2004d47bec20c564e60a0c9.jpg'
+    },
+    commentInfo: {
+      groupId: '6745665728319324683',
+      itemId: '6745665728319324683',
+      comments_count: 0,
+      ban_comment: 0
+    },
+    mediaInfo: {
+      uid: '5772853537',
+      name: '云帆聊电影',
+      avatar: '//p8.pstatp.com/large/ff14000013f5dd766585',
+      openUrl: '/c/user/5772853537/',
+      follow: false
+    },
+    pgcInfo: [{"item_id":"6791627414842638859","url":"\u002Fitem\u002F6791627414842638859","title":"韩国电影成大黑马！第92届奥斯卡奖项大爆冷门！《寄生虫》登顶"},{"item_id":"6791400960192152068","url":"\u002Fitem\u002F6791400960192152068","title":"徐克的这一个坚持，成就了最颠覆的林青霞和“最美的”东方不败"},{"item_id":"6789788275180569092","url":"\u002Fitem\u002F6789788275180569092","title":"20亿票房的这部电影，见证了宁浩中国黑色荒诞喜剧电影“第一人”"},{"item_id":"6788365835527258637","url":"\u002Fitem\u002F6788365835527258637","title":"这才是“热搜”应该有的样子，这才应该是真正的“流量人物”"}],
+    feedInfo: {
+      url: '/toutiao/api/pc/feed/',
+      category: '__all__',
+      initList: []
+    },
+    shareInfo: {
+      shareUrl: 'https://m.toutiao.com/item/6745665728319324683/',
+      abstract: '&quot;2019国庆档创历史最高 《我和我的祖国》拿下第一今年的国庆档颇有几分赛车比赛尚未开始，大家就已经全速运转发动机轰轰作响的既视感——因为大家都是定于9月30日上映，三大国庆强片：《我和我的祖国》、《中国机长》、《攀登者》。&quot;'.slice(6, -6).replace(/<br \/>/ig, ''),
+      commentCount: '0',
+      ban_comment: 0
+    }
+  };</script>, <script>var imgUrl = '/c/exzq6ciphxrjl5o5zw6rfj6h4t51lc86tkm47x45vvtc7zh2cda3xqrxg/';</script>, <script>tac='i+2gv1u0y5psis!i#4a8s"yZl!%s"l"u&kLs#l l#vr*charCodeAtx0[!cb^i$1em7b*0d#>>>s j\uffeel  s#0,<8~z|\x7f@QGNCJF[\\^D\\KFYSk~^WSZhg,(lfi~ah`{md"inb|1d<,%Dscafgd"in,8[xtm}nLzNEGQMKAdGG^NTY\x1ckgd"inb<b|1d<g,&TboLr{m,(\x02)!jx-2n&vr$testxg,%@tug{mn ,%vrfkbm[!cb|'</script>, <script crossorigin="anonymous" src="//s3b.pstatp.com/toutiao/static/js/vendor.6f020e99871577953c95.js" type="text/javascript"></script>, <script crossorigin="anonymous" src="//s3.pstatp.com/toutiao/static/js/page/index_node/index.5d525bd5351cfdd9855f.js" type="text/javascript"></script>, <script crossorigin="anonymous" src="//s3a.pstatp.com/toutiao/static/js/ttstatistics.c0c8c725efceb52dc6ba.js" type="text/javascript"></script>, <script>(function(win, export_obj) {
+      win['TeaAnalyticsObject'] = export_obj;
+      if (!win[export_obj]) {
+          function _collect() {
+              _collect.q.push(arguments);
+          }
+          _collect.q = _collect.q || [];
+          win[export_obj] = _collect;
+      }
+      win[export_obj].l = +new Date();
+  })(window, 'collectEvent');</script>, <script async="" src="https://s3.pstatp.com/pgc/tech/collect/collect-v.3.2.14.js"></script>, <script>// Init tea log
+  window.collectEvent('init', {
+    app_id: 2256,
+    channel: 'cn',
+    log: false, // 开启调试日志
+  });
+  window.collectEvent('start');
+  window.collectEvent('pageview', {
+    'from': 'detail',
+  });
+
+  if (window.ttAnalysis) {
+    ttAnalysis.setup({
+      c: 'detail_article'
+    });
+    ttAnalysis.send('pageview', {});
+  }</script>, <script>document.getElementsByTagName('body')[0].addEventListener('click', function(e) {
+    var target = e.target,
+        ga_event,
+        ga_category,
+        ga_label,
+        ga_value;
+    while(target && target.nodeName.toUpperCase() !== 'BODY') {
+      ga_event = target.getAttribute('ga_event');
+      ga_category = target.getAttribute('ga_category') || 'detail_article';
+      ga_label = target.getAttribute('ga_label') || '';
+      ga_value = target.getAttribute('ga_value') || 1;
+      ga_event && window.ttAnalysis && ttAnalysis.send('event', { ev: ga_event });
+      target = target.parentNode;
+    }
+});</script>]
